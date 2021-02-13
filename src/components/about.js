@@ -9,21 +9,21 @@ const Header = ({ data }) => (
           <Img
             fluid={data.photo.fluid}
             objectFit="cover"
-            objectPosition="top center"
+            objectPosition="50% 50%"
           />
         </div>
         <div className="left col-md-7 col-lg-8">
           <div className="about-details">
-            <span className="name">My Name is {data.name}.</span>
-            <h2 className="sub-position">
-              I'm a Professional {data.designation}.
+            <span className="name" style={{color: '#333333b8', marginBottom: '2rem', textTransform: 'uppercase'}}>{data.realName}</span>
+            <h2 className="sub-position" style={{marginBottom: '2rem'}}>
+              Cooking straight from the heart
             </h2>
             <div
               dangerouslySetInnerHTML={{
                 __html: data.description.childMarkdownRemark.html
               }}
             />
-            <ul className="details">
+            {/* <ul className="details">
               <li>
                 <strong>Full Name</strong>
                 <p>{data.name}</p>
@@ -42,8 +42,8 @@ const Header = ({ data }) => (
                   <a href={`mailto:${data.gmail}`}>{data.gmail}</a>
                 </p>
               </li>
-            </ul>
-            <div className="socials">
+            </ul> */}
+            {/* <div className="socials">
               <ul>
                 <li>
                   <a
@@ -86,7 +86,7 @@ const Header = ({ data }) => (
                   ></a>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

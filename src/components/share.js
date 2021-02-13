@@ -13,6 +13,8 @@ const Share = ({ socialConfig }) => {
       <FacebookShareButton
         url={socialConfig.config.url}
         className="button is-outlined is-rounded facebook"
+        quote="@stefano_metafuni_chef on Instagram"
+        hashtag="#casametafuni"
       >
         <span className="icon">
           <i className="fab fa-facebook-f"></i>
@@ -23,7 +25,7 @@ const Share = ({ socialConfig }) => {
         url={socialConfig.config.url}
         className="button is-outlined is-rounded twitter"
         title={socialConfig.config.title}
-        via="_rohitguptab"
+        // via="_rohitguptab"
       >
         <span className="icon">
           <i className="fab fa-twitter"></i>

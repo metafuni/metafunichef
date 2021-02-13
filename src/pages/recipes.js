@@ -7,7 +7,7 @@ import moment from "moment";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-export default class Blogs extends Component {
+export default class Recipes extends Component {
   render() {
     const { data } = this.props;
   
@@ -17,24 +17,24 @@ export default class Blogs extends Component {
           title="Blogs"
           keywords={[`Rohit Gupta`, `Frontend Developer`, `Developer`, `Blogs`]}
         />
-        <div className="site-container blogs-page" id="Blogs">
+        <div className="site-container blogs-page" id="Recipes">
           <div className="container">
             <div className="section-head">
-              <h1 className="line-heading h2">Blog</h1>
+              <h1 className="line-heading h2">Recipes</h1>
             </div>
             <ul
               className={`blogs-list ${
-                data.allContentfulBlogs.edges.length < 5 ? "few-blogs" : ""
+                data.allContentfulRecipes.edges.length < 5 ? "few-blogs" : ""
               }`}
             >
-              {data.allContentfulBlogs.edges.map((item, index) => {
+              {data.allContentfulRecipes.edges.map((item, index) => {
                 return (
                   <li key={index} className="item">
                     <div className="inner">
                       <Link className="link" to={`/${item.node.slug}`} />
-                      {item.node.featureImage ? (
+                      {item.node.image ? (
                         <Img
-                          fluid={item.node.featureImage.fluid}
+                          fluid={item.node.image.fluid}
                           objectFit="cover"
                           objectPosition="50% 50%"
                         />
@@ -61,13 +61,13 @@ export default class Blogs extends Component {
 }
 
 export const pageQuery = graphql`
-  query BlogsQuery {
-    allContentfulBlogs(sort: {fields: createdAt, order: DESC}) {
+  query RecipesQuery {
+    allContentfulRecipes(sort: {fields: createdAt, order: DESC}) {
       edges {
         node {
           title
           slug
-          featureImage {
+          image {
             fluid(maxWidth: 1500) {
               base64
               aspectRatio
@@ -79,11 +79,6 @@ export const pageQuery = graphql`
             }
           }
           createdAt
-          childContentfulBlogsDescriptionTextNode {
-            childMarkdownRemark {
-              timeToRead
-            }
-          }
         }
       }
     }

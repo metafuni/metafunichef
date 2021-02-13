@@ -2,14 +2,15 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
-import SEO from "../components/seo";
+import SEO from "../components/seo"; 
 
 import Banner from "../components/banner";
 import About from "../components/about";
-import Service from "../components/service";
-import Work from "../components/work";
 import Blogs from "../components/blogs";
-import Testimonial from "../components/testimonial";
+import Recipes from "../components/recipes";
+import Section from "../components/section";
+import Extrasection from "../components/extrasection";
+import Lastsection from "../components/lastsection";
 import Contact from "../components/contact";
 import Photos from "../components/photos";
 
@@ -17,7 +18,7 @@ const IndexPage = ({ data }) => (
   <Layout header="home">
     <SEO
       title={data.contentfulAboutMe.designation}
-      keywords={[`Rohit Gupta`, `Frontend Developer`, `Developer`]}
+      keywords={[`Metafuni Chef`, `${data.contentfulAboutMe.designation}`, `Italian`, `World`, `Cooking`]}
     />
     <Banner data={data.contentfulAboutMe}></Banner>
 
@@ -28,9 +29,15 @@ const IndexPage = ({ data }) => (
       })}
 
     {data.contentfulSiteInformation.menus
-      .filter(item => item === "Service")
+      .filter(item => item === "Recipes")
       .map(t => {
-        return <Service key="Service" data={data.allContentfulService}></Service>;
+        return <Recipes key="Recipes" data={data.allContentfulRecipes}></Recipes>;
+      })}
+
+    {data.contentfulSiteInformation.menus
+      .filter(item => item === "Section")
+      .map(t => {
+        return <Section key="Section" data={data.contentfulSection}></Section>;
       })}
 
     {data.contentfulSiteInformation.menus
@@ -40,23 +47,21 @@ const IndexPage = ({ data }) => (
       })}
 
     {data.contentfulSiteInformation.menus
-      .filter(item => item === "Work")
+      .filter(item => item === "Extrasection")
       .map(t => {
-        return <Work key="Work" data={data.allContentfulWorks}></Work>;
-      })}
-
-    {data.contentfulSiteInformation.menus
-      .filter(item => item === "Testimonials")
-      .map(t => {
-        return (
-          <Testimonial key="Testimonial" data={data.allContentfulTestimonials}></Testimonial>
-        );
+        return <Extrasection key="Extrasection" data={data.contentfulExtrasection}></Extrasection>;
       })}
 
     {data.contentfulSiteInformation.menus
       .filter(item => item === "Photos")
       .map(t => {
         return <Photos key="Photos" data={data.contentfulPhotos}></Photos>;
+      })}
+
+    {data.contentfulSiteInformation.menus
+      .filter(item => item === "Lastsection")
+      .map(t => {
+        return <Lastsection key="Lastsection" data={data.contentfulLastsection}></Lastsection>;
       })}
 
     {data.contentfulSiteInformation.menus
@@ -73,6 +78,7 @@ export const pageQuery = graphql`
   query AboutQuery {
     contentfulAboutMe {
       name
+      realName
       photo {
         file {
           url
@@ -89,13 +95,8 @@ export const pageQuery = graphql`
       }
       designation
       age
-      facebook
-      github
-      gmail
       id
       instagram
-      linkdin
-      twitter
       location
       description {
         childMarkdownRemark {
@@ -115,16 +116,22 @@ export const pageQuery = graphql`
       }
       bannerList
     }
-    allContentfulService {
-      edges {
-        node {
-          title
-          description {
-            childMarkdownRemark {
-              html
-            }
-          }
+    contentfulSection {
+      sectionTitle
+      sectionText {
+        sectionText
+      }
+    }
+    contentfulExtrasection {
+      title,
+        childContentfulExtrasectionExtrasectionTextTextNode {
+          extrasectionText
         }
+    }
+    contentfulLastsection {
+      title,
+      childContentfulLastsectionDescriptionTextNode {
+        description
       }
     }
     allContentfulBlogs(limit: 5, sort: {fields: createdAt, order: DESC}) {
@@ -143,39 +150,19 @@ export const pageQuery = graphql`
               sizes
             }
           }
-          createdAt
+          createdAt(fromNow: true)
         }
       }
     }
-    allContentfulTestimonials {
+    allContentfulRecipes(limit: 5, sort: {fields: createdAt, order: DESC}) {
       edges {
         node {
-          name
-          subTitle
-          description {
-            childMarkdownRemark {
-              html
-            }
-          }
-          avatarImage {
-            fluid(maxWidth: 200) {
-              base64
-              aspectRatio
-              src
-              srcSet
-              srcWebp
-              srcSetWebp
-              sizes
-            }
-          }
-        }
-      }
-    }
-    allContentfulWorks {
-      edges {
-        node {
-          siteName
-          url
+          title
+          slug
+          category
+          origin
+          tags
+          diet
           image {
             fluid(maxWidth: 600) {
               base64
@@ -187,6 +174,7 @@ export const pageQuery = graphql`
               sizes
             }
           }
+          createdAt
         }
       }
     }

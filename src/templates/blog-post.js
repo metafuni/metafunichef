@@ -11,7 +11,7 @@ import Share from "../components/share";
 export default class blogPost extends Component {
   render() {
     const data = this.props.data.contentfulBlogs;
-    const disqusShortname = "RohitGupta";
+    const disqusShortname = "metafuni-chef";
     const disqusConfig = {
       identifier: data.id,
       title: data.title
@@ -30,7 +30,7 @@ export default class blogPost extends Component {
 
     return (
       <Layout>
-        <SEO
+        {/* <SEO
           title={data.title}
           keywords={[
             `Rohit Gupta`,
@@ -38,6 +38,12 @@ export default class blogPost extends Component {
             `Developer`,
             `${data.title}`
           ]}
+        /> */}
+                <SEO
+          title={data.title}
+          keywords={['Metafuni Chef', 'Italian', 'World', 'Cooking', 'Blog', 'Foodblog', `${data.title}`, data.tags.map(el => (
+            ` ${el} `
+          ))]}
         />
         <div className="site-container blog-post">
           <div className="container">
@@ -53,15 +59,17 @@ export default class blogPost extends Component {
             )}
 
             <div className="details">
-              <h1 className="title">{data.title}</h1>
+              <h1 className="title" style={{ fontSize: '2rem' }}>{data.title}</h1>
               <span className="date">
                 <i className="fas fa-calendar-alt"></i>{" "}
-                {moment(data.createdAt).format("LL")}
+                {moment(data.createdAt).format("LL")}<br></br>
+                {data.description.childMarkdownRemark.timeToRead && (<span>{data.description.childMarkdownRemark.timeToRead} minute read</span>)}
               </span>
               <div
                 dangerouslySetInnerHTML={{
                   __html: data.description.childMarkdownRemark.html
                 }}
+                style={{margin: '3rem auto 2rem auto'}}
               />
             </div>
             <Share
@@ -85,11 +93,12 @@ export default class blogPost extends Component {
 }
 
 export const pageQuery = graphql`
-  query SinglePostQuery($slug: String!) {
+  query singlePostQueryAndSinglePostQuery ($slug: String!) {
     contentfulBlogs(slug: { eq: $slug }) {
       id
       title
       slug
+      tags
       featureImage {
         fluid(maxWidth: 1500) {
           base64
@@ -104,6 +113,7 @@ export const pageQuery = graphql`
       description {
         childMarkdownRemark {
           html
+          timeToRead
         }
       }
       createdAt
