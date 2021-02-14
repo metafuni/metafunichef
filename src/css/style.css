@@ -594,16 +594,16 @@ form > div {
   box-shadow: 1px 1px 4px #333, -1px -1px 4px #333;
 }
 .info {
-  background: url("./sectionbackground.jpg") no-repeat center center
+  background: url("sectionbackground.jpg") no-repeat center center
     fixed !important;
 }
 .info2 {
-  background: url("./sectionbackground2.jpg") no-repeat center center
+  background: url("sectionbackground2.jpg") no-repeat center center
     fixed !important;
   background-size: cover !important;
 }
 .info3 {
-  background: url("./sectionbackground3.jpg") no-repeat center center
+  background: url("sectionbackground3.jpg") no-repeat center center
     fixed !important;
   background-size: cover !important;
 }
