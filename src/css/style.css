@@ -593,7 +593,7 @@ form > div {
   position: relative !important;
   box-shadow: 1px 1px 4px #333, -1px -1px 4px #333;
 }
-.info {
+/* .info {
   background: url("sectionbackground.jpg") no-repeat center center
     fixed !important;
     background-size: cover !important;
@@ -607,7 +607,7 @@ form > div {
   background: url("sectionbackground3.JPG") no-repeat center center
     fixed !important;
   background-size: cover !important;
-}
+} */
 .info::after,
 .info2::after,
 .info3::after {
