@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import BgImage from "../../public/sectionbackground.jpg";
 
 export default class Section extends Component {
   render() {
     const { data } = this.props;
     return (
-      <div className="info section" id="Info">
+      <div className="info section" id="Info" style={{ backgroundImage: `${BgImage}` }}>
         <div className="container">
           <div className="section-main row">
             <div className="left col-md-7 col-lg-8">

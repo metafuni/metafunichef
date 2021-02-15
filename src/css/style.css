@@ -594,18 +594,18 @@ form > div {
   box-shadow: 1px 1px 4px #333, -1px -1px 4px #333;
 }
 .info {
-  background: url("../../public/static/sectionbackground.jpg") no-repeat center center
-    fixed !important;
+  /* background: url("../../public/static/sectionbackground.jpg") no-repeat center center
+    fixed !important; */
     background-size: cover !important;
 }
 .info2 {
-  background: url("../../public/static/sectionbackground2.jpg") no-repeat center center
-    fixed !important;
+  /* background: url("../../public/static/sectionbackground2.jpg") no-repeat center center
+    fixed !important; */
   background-size: cover !important;
 }
 .info3 {
-  background: url("../../public/static/sectionbackground3.jpg") no-repeat center center
-    fixed !important;
+  /* background: url("../../public/static/sectionbackground3.jpg") no-repeat center center
+    fixed !important; */
   background-size: cover !important;
 }
 .info::after,

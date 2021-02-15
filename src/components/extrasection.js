@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import BgImage from "../images/sectionbackground2.jpg";
 
 export default class Extrasection extends Component {
   render() {
     const { data } = this.props;
     return (
-      <div className="info2 section" id="Info2">
+      <div className="info2 section" id="Info2" style={{ backgroundImage: `${BgImage}` }}>
         <div className="container">
           <div className="section-main row">
             <div className="left col-md-7 col-lg-8">
