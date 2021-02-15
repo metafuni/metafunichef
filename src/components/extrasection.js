@@ -5,7 +5,7 @@ export default class Extrasection extends Component {
   render() {
     const { data } = this.props;
     return (
-      <div className="info2 section" id="Info2" style={{ backgroundImage: `${BgImage}` }}>
+      <div className="info2 section" id="Info2" style={{ backgroundImage: `url(${BgImage})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed' }}>
         <div className="container">
           <div className="section-main row">
             <div className="left col-md-7 col-lg-8">

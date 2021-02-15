@@ -596,17 +596,17 @@ form > div {
 .info {
   /* background: url("../../public/static/sectionbackground.jpg") no-repeat center center
     fixed !important; */
-    background-size: cover !important;
+    /* background-size: cover !important; */
 }
 .info2 {
   /* background: url("../../public/static/sectionbackground2.jpg") no-repeat center center
     fixed !important; */
-  background-size: cover !important;
+  /* background-size: cover !important; */
 }
 .info3 {
   /* background: url("../../public/static/sectionbackground3.jpg") no-repeat center center
     fixed !important; */
-  background-size: cover !important;
+  /* background-size: cover !important; */
 }
 .info::after,
 .info2::after,
