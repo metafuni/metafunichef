@@ -593,21 +593,21 @@ form > div {
   position: relative !important;
   box-shadow: 1px 1px 4px #333, -1px -1px 4px #333;
 }
-/* .info {
-  background: url("sectionbackground.jpg") no-repeat center center
+.info {
+  background: url("../images/sectionbackground.jpg") no-repeat center center
     fixed !important;
     background-size: cover !important;
 }
 .info2 {
-  background: url("sectionbackground2.jpg") no-repeat center center
+  background: url("../images/sectionbackground2.jpg") no-repeat center center
     fixed !important;
   background-size: cover !important;
 }
 .info3 {
-  background: url("sectionbackground3.JPG") no-repeat center center
+  background: url("../images/sectionbackground3.jpg") no-repeat center center
     fixed !important;
   background-size: cover !important;
-} */
+}
 .info::after,
 .info2::after,
 .info3::after {

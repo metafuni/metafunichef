@@ -166,12 +166,21 @@ export default class Header extends Component {
                           </li>
                         );
                       })}
+                    {data.menus
+                      .filter(item => item === "Contact")
+                      .map(t => {
+                        return (
+                          <li key="Contact">
+                            <Link to={`/contact`}>Contact</Link>
+                          </li>
+                        );
+                      })}
 
                     {data.menus
                       .filter(item => item === "Social")
                       .map(t => {
                         return (
-                          <li key="Social">
+                          <li key="Social" style={{ transform: 'translateY(3px)' }}>
                             <Link to="https://www.instagram.com/stefano_metafuni_chef/" target="_blank" className="fab fa-instagram">
                             </Link>
                           </li>
