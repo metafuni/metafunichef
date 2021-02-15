@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import BgImage from "../../public/sectionbackground.jpg";
+import BgImage from "./sectionbackground.jpg";
 
 export default class Section extends Component {
   render() {

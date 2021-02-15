@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import BgImage from "../images/sectionbackground3.jpg";
+import BgImage from "./sectionbackground3.jpg";
 
 export default class Lastsection extends Component {
   render() {
