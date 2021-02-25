@@ -55,7 +55,7 @@ export default class recipePost extends Component {
 
         <div className="site-container blog-post" style={{ paddingTop: '2rem' }}>
           <div className="container">
-            <h3 style={{ fontSize: '1.56rem', opacity: '.85' }}>{data.childContentfulRecipesSubtitleTextNode.subtitle}</h3>
+            <h3 style={{ fontSize: '1.56rem', opacity: '.85', textAlign: 'center' }}>{data.childContentfulRecipesSubtitleTextNode.subtitle}</h3>
             <div className="diet-info" style={{ opacity: '.95', marginBottom: '7.5rem', marginTop: '2rem' }}>
               <div className="diet-info-item"><i className="fas fa-utensils"></i>{data.category}</div>
               <div className="diet-info-item"><i className="fas fa-map-pin"></i>{data.origin}</div>
@@ -65,6 +65,13 @@ export default class recipePost extends Component {
                 {data.diet === "Vegetarian" ? (<i className="fas fa-carrot"></i>) : null}
                 {data.diet === "Vegan" ? (<i className="fas fa-leaf"></i>) : null}
                 {data.diet}
+              </div>
+              <div className="diet-info-item">
+                <i className="fas fa-stopwatch"></i>{data.duration}
+              </div>
+
+              <div className="diet-info-item">
+                <i className="fas fa-tachometer-alt"></i>{data.difficulty}
               </div>
             </div>
             <div className="section-main row">
@@ -140,6 +147,8 @@ export const pageQuery = graphql`
       tags
       diet
       serves
+      duration
+      difficulty
       childContentfulRecipesSubtitleTextNode {
         subtitle
       }

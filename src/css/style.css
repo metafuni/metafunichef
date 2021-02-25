@@ -489,6 +489,35 @@ form > div {
 .section:nth-child(odd) form textarea {
   background: #fff !important;
 }
+.contact-page .container .contact {
+  padding-top: 2.5rem;
+}
+.blogs-page .container .inputbox {
+  border: 2px solid #333333b8;
+  border-radius: .25rem;
+  background: rgba(51, 51, 51, 0.02);
+  transition: .3s;
+  margin: 1rem auto;
+  padding: .2rem 1rem;
+  box-shadow: inset 1px 1px 3px #33333315,
+  inset -1px 1px 3px #33333315,
+  inset 1px -1px 3px #33333315,
+  inset -1px -1px 3px #33333315;
+  opacity: .9;
+}
+.blogs-page .container .inputbox:focus {
+  border: 2px solid #333333b8;
+  padding: .2rem 3rem .2rem .5rem;
+  opacity: 1;
+  box-shadow: none;
+}
+.blogs-page .container .inputbox::placeholder {
+  transition: .3s;
+  font-style: italic;
+}
+.blogs-page .container .inputbox:focus::placeholder {
+  color: transparent;
+}
 .blogs-list {
   display: flex;
   flex-wrap: wrap;
@@ -644,6 +673,18 @@ h2:after,
   top: 100%;
   left: 0;
 }
+#Recipes .container .blogs-list .inner .link .details .title{
+  transition: .3s;
+}
+#Recipes .container .blogs-list .inner .link:hover .details .title{
+  color: rgb(48, 48, 48);
+} 
+#Recipes .container .blogs-list .inner .link img{
+  transition: .5s !important;
+}
+#Recipes .container .blogs-list .inner .link:hover img{
+  transform: scale(1.1) !important;
+} 
 .see-more {
   text-align: center;
   display: inline-block;
@@ -806,6 +847,7 @@ pre {
 }
 .site-container {
   padding: 100px 0 20px 0;
+  min-height: 90vh;
 }
 .blog-post .feature-img {
   width: 100%;
@@ -1023,9 +1065,8 @@ pre {
   font-size: 26px;
   margin-bottom: 20px;
 }
-.blog-post .details .date {
-  font-size: 14px;
-  margin-bottom: 30px;
+.blogs-list .item .inner .details .date {
+  font-size: 13px;
 }
 .blog-post .details h2 {
   font-size: 22px;
@@ -1180,6 +1221,9 @@ code {
   .blog-post .container .row .right .description div {
     margin-left: -1rem;
   }
+  .blogs-list .item .inner .details .date {
+    font-size: 12px;
+  }
   .post-social button:after {
     top: 0;
   }
@@ -1213,9 +1257,9 @@ code {
     padding: 5px 10px !important;
     font-size: 12px !important;
   }
-  .blogs-list .item .inner .details .date {
+  /* .blogs-list .item .inner .details .date {
     font-size: 12px;
-  }
+  } */
   .blogs-list .item .inner .details .title {
     font-size: 20px;
   }

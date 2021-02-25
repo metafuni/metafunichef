@@ -5,8 +5,8 @@ export default class footer extends Component {
     return (
       <div className="site-footer" id="footer">
         <div className="container">
-          <span style={{textTransform: 'uppercase'}}>{this.props.siteName} <span style={{textTransform: 'lowercase', fontSize: '.75rem', marginLeft: '.5rem'}}>
-© Copyright 2021, all rights are reserved</span></span>
+          <span style={{ textTransform: 'uppercase' }}>{this.props.siteName} <span style={{ textTransform: 'lowercase', fontSize: '.75rem', marginLeft: '.5rem' }}>
+            © Copyright 2021, all rights are reserved</span></span>
         </div>
       </div>
     );

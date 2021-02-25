@@ -8,51 +8,123 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 export default class Recipes extends Component {
+  constructor() {
+    super();
+    this.state = {
+      search: ''
+    };
+  };
+
+  updateSearch(event) {
+    this.setState({ search: event.target.value });
+  };
+
   render() {
     const { data } = this.props;
-  
+    if (this.state.search !== "") {
+      console.log(data.allContentfulRecipes.edges[0].node.tags[1].includes(this.state.search));
+
+    };
+
+    let filteredRecipes = data.allContentfulRecipes.edges.filter((recipe) => {
+      return recipe.node.title.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1 ||
+        recipe.node.ingredients.ingredients.includes(this.state.search.toLowerCase()) ||
+        recipe.node.diet.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1 ||
+        recipe.node.category.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1 ||
+        recipe.node.origin.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1 ||
+        recipe.node.difficulty.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1 ||
+        recipe.node.tags.indexOf(this.state.search.toLowerCase()) !== -1;
+    });
+    let firstPasta = filteredRecipes.filter((recipe) => {
+      return recipe.node.category === "Pasta"
+    })[0];
+    let firstRisotto = filteredRecipes.filter((recipe) => {
+      return recipe.node.category === "Risotto"
+    })[0];
+    let firstSoup = filteredRecipes.filter((recipe) => {
+      return recipe.node.category === "Soup"
+    })[0];
+    let firstMain = filteredRecipes.filter((recipe) => {
+      return recipe.node.category === "Main"
+    })[0];
+    let firstSide = filteredRecipes.filter((recipe) => {
+      return recipe.node.category === "Side"
+    })[0];
     return (
       <Layout>
         <SEO
-          title="Blogs"
-          keywords={[`Rohit Gupta`, `Frontend Developer`, `Developer`, `Blogs`]}
+          title="Recipes"
+          keywords={[`Metafuni Chef`, `Italian`, `World`, `Cooking`, `Recipes`, `Creative`, `Authentic`, `Traditional`]}
         />
-        <div className="site-container blogs-page" id="Recipes">
+        <div className="site-container blogs-page" id="Recipes" style={{ minHeight: '90vh' }}>
           <div className="container">
             <div className="section-head">
               <h1 className="line-heading h2">Recipes</h1>
             </div>
-            <ul
-              className={`blogs-list ${
-                data.allContentfulRecipes.edges.length < 5 ? "few-blogs" : ""
-              }`}
-            >
-              {data.allContentfulRecipes.edges.map((item, index) => {
-                return (
-                  <li key={index} className="item">
-                    <div className="inner">
-                      <Link className="link" to={`/${item.node.slug}`} />
-                      {item.node.image ? (
-                        <Img
-                          fluid={item.node.image.fluid}
-                          objectFit="cover"
-                          objectPosition="50% 50%"
-                        />
-                      ) : (
-                        <div className="no-image"></div>
-                      )}
-                      <div className="details">
-                        <h3 className="title">{item.node.title}</h3>
-                        <span className="date">
-                          <i className="fas fa-calendar-alt"></i>{" "}
-                          {moment(item.node.createdAt).format("LL")}
-                        </span>
-                      </div>
-                    </div>
-                  </li>
-                );
-              })}
-            </ul>
+            <div className="blogs-list">
+              <div className="inner" style={{width: '50%', padding: '1rem'}}>
+              <Link to="/pasta" className="link" style={{textDecoration: 'none', color: '#333333b8'}}>
+                <Img
+                  fluid={firstPasta.node.image.fluid}
+                  objectFit="cover"
+                  objectPosition="50% 50%"
+                  className="recipeimg"
+                />
+                <div className="details" style={{textAlign: 'center'}}>
+                  <h3 className="title" style={{margin: '.5rem auto'}}>Pastas</h3>
+                </div>
+              </Link>
+              </div>
+              
+              <div className="inner" style={{width: '50%', padding: '1rem'}}>
+              <Link to="/risotto" className="link" style={{textDecoration: 'none', color: '#333333b8'}}>
+                <Img
+                  fluid={firstRisotto.node.image.fluid}
+                  objectFit="cover"
+                  objectPosition="50% 50%"
+                />
+                <div className="details" style={{textAlign: 'center'}}>
+                  <h3 className="title" style={{margin: '.5rem auto'}}>Risottos</h3>
+                </div>
+              </Link>
+              </div>              
+              <div className="inner" style={{width: '50%', padding: '1rem'}}>
+              <Link to="/soup" className="link" style={{textDecoration: 'none', color: '#333333b8'}}>
+                <Img
+                  fluid={firstSoup.node.image.fluid}
+                  objectFit="cover"
+                  objectPosition="50% 50%"
+                />
+                <div className="details" style={{textAlign: 'center'}}>
+                  <h3 className="title" style={{margin: '.5rem auto'}}>Soups</h3>
+                </div>
+              </Link>
+              </div>              
+              <div className="inner" style={{width: '50%', padding: '1rem'}}>
+              <Link to="/main" className="link" style={{textDecoration: 'none', color: '#333333b8'}}>
+                <Img
+                  fluid={firstMain.node.image.fluid}
+                  objectFit="cover"
+                  objectPosition="50% 50%"
+                />
+                <div className="details" style={{textAlign: 'center'}}>
+                  <h3 className="title" style={{margin: '.5rem auto'}}>Mains</h3>
+                </div>
+              </Link>
+              </div>              
+              <div className="inner" style={{width: '50%', padding: '1rem'}}>
+              <Link to="/side" className="link" style={{textDecoration: 'none', color: '#333333b8'}}>
+                <Img
+                  fluid={firstSide.node.image.fluid}
+                  objectFit="cover"
+                  objectPosition="50% 50%"
+                />
+                <div className="details" style={{textAlign: 'center'}}>
+                  <h3 className="title" style={{margin: '.5rem auto'}}>Sides</h3>
+                </div>
+              </Link>
+              </div>
+            </div>
           </div>
         </div>
       </Layout>
@@ -79,6 +151,15 @@ export const pageQuery = graphql`
             }
           }
           createdAt
+          category
+          origin
+          diet
+          duration
+          difficulty
+          ingredients {
+            ingredients
+          }
+          tags
         }
       }
     }

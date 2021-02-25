@@ -163,6 +163,8 @@ export const pageQuery = graphql`
           origin
           tags
           diet
+          duration
+          difficulty
           image {
             fluid(maxWidth: 600) {
               base64

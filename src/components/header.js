@@ -181,8 +181,8 @@ export default class Header extends Component {
                       .map(t => {
                         return (
                           <li key="Social" style={{ transform: 'translateY(3px)' }}>
-                            <Link to="https://www.instagram.com/stefano_metafuni_chef/" target="_blank" className="fab fa-instagram">
-                            </Link>
+                            {/* <Link to="https://www.instagram.com/stefano_metafuni_chef/" target="_blank" className="fab fa-instagram" /> */}
+                            <a href="https://www.instagram.com/stefano_metafuni_chef/" target="_blank" className="fab fa-instagram"></a>
                           </li>
                         )
                       })}
