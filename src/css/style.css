@@ -678,7 +678,7 @@ h2:after,
 }
 #Recipes .container .blogs-list .inner .link:hover .details .title{
   color: rgb(48, 48, 48);
-} 
+}
 #Recipes .container .blogs-list .inner .link img{
   transition: .5s !important;
 }
@@ -1232,6 +1232,23 @@ code {
   }
 }
 @media only screen and (max-width: 568px) {
+  .blogs-page .container .section-head {
+    display: block !important;
+  }
+  .blogs-page .container .section-head .see-more {
+    text-align: start !important;
+  }
+  .blogs-page .container .section-head .h2 {
+    margin-bottom: 0;
+    margin-top: 3rem;
+  }
+  #Recipes .container .blogs-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  #Recipes .container .blogs-list .inner {
+    width: 90vw !important;
+  }
   .photos-page-list .item {
     width: 100%;
   }

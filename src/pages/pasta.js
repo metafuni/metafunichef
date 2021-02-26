@@ -39,13 +39,13 @@ export default class Pasta extends Component {
         />
         <div className="site-container blogs-page" id="Pasta">
           <div className="container">
-            <div className="section-head" style={{display: 'flex', justifyContent: 'space-between'}}>
-              <h1 className="line-heading h2">Pasta Recipes</h1>
-              <div className="see-more" style={{margin: '0', textAlign: 'end', maxWidth: '200px'}}>
-                <Link to="/recipes" style={{paddingTop: '3px', paddingBottom: '3px'}}>
+            <div className="section-head" style={{display: 'flex', justifyContent: 'space-between', flexDirection: 'row-reverse'}}>
+            <div className="see-more" style={{margin: '0', textAlign: 'end', maxWidth: '200px'}}>
+                <Link to="/recipes" style={{paddingTop: '3px', paddingBottom: '3px'}} className="allrecipes">
                   <span><i className="fas fa-chevron-left" style={{marginRight: '.5rem'}}></i>all recipes</span>
                 </Link>
-              </div>
+              </div><br></br>
+              <h1 className="line-heading h2">Pasta Recipes</h1>
             </div>
             <input
               type="text"
