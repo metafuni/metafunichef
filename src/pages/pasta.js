@@ -51,7 +51,7 @@ export default class Pasta extends Component {
               type="text"
               value={this.state.search}
               onChange={this.updateSearch.bind(this)}
-              placeholder=" search pasta..."
+              placeholder=" search pasta or ingredient..."
               className="inputbox"
             />
             <ul

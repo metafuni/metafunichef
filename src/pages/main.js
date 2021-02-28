@@ -51,7 +51,7 @@ export default class Main extends Component {
               type="text"
               value={this.state.search}
               onChange={this.updateSearch.bind(this)}
-              placeholder=" search main course..."
+              placeholder="search main course..."
               className="inputbox"
             />
             <ul

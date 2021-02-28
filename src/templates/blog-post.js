@@ -39,7 +39,7 @@ export default class blogPost extends Component {
             `${data.title}`
           ]}
         /> */}
-                <SEO
+        <SEO
           title={data.title}
           keywords={['Metafuni Chef', 'Italian', 'World', 'Cooking', 'Blog', 'Foodblog', `${data.title}`, data.tags.map(el => (
             ` ${el} `
@@ -55,8 +55,8 @@ export default class blogPost extends Component {
                 objectPosition="50% 50%"
               />
             ) : (
-              <div className="no-image"></div>
-            )}
+                <div className="no-image"></div>
+              )}
 
             <div className="details">
               <h1 className="title" style={{ fontSize: '2rem' }}>{data.title}</h1>
@@ -69,7 +69,7 @@ export default class blogPost extends Component {
                 dangerouslySetInnerHTML={{
                   __html: data.description.childMarkdownRemark.html
                 }}
-                style={{margin: '3rem auto 2rem auto'}}
+                style={{ margin: '3rem auto 2rem auto' }}
               />
             </div>
             <Share

@@ -51,7 +51,7 @@ export default class Soup extends Component {
               type="text"
               value={this.state.search}
               onChange={this.updateSearch.bind(this)}
-              placeholder=" search soup..."
+              placeholder=" search soup or ingredient..."
               className="inputbox"
             />
             <ul

@@ -51,7 +51,7 @@ export default class Risotto extends Component {
               type="text"
               value={this.state.search}
               onChange={this.updateSearch.bind(this)}
-              placeholder=" search risotto..."
+              placeholder=" search risotto or ingredient..."
               className="inputbox"
             />
             <ul

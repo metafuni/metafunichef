@@ -51,7 +51,7 @@ export default class Side extends Component {
               type="text"
               value={this.state.search}
               onChange={this.updateSearch.bind(this)}
-              placeholder=" search side dish..."
+              placeholder=" search side or ingredient..."
               className="inputbox"
             />
             <ul
