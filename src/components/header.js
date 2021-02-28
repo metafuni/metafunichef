@@ -23,7 +23,7 @@ export default class Header extends Component {
                 ) : (
                     <span>{data.siteName}</span>
                   )} */}
-                  METAFUNI CHEF
+                  CHEF METAFUNI
               </Link>
             </div>
             <div
