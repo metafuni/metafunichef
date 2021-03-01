@@ -8,12 +8,12 @@ export default class Banner extends Component {
     const { data } = this.props;
     return (
       <div className="banner">
-        <Parallax speed={2}>
+        <Parallax speed={2} className="bannerparallax">
           <Img
             fluid={data.bannerImage.fluid}
             objectFit="cover"
             objectPosition="50% 50%"
-            imgStyle={{ opacity: '.7' }}
+            imgStyle={{ opacity: '.9' }}
           />
         </Parallax>
         <div className="container">

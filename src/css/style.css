@@ -1135,6 +1135,10 @@ code {
   }
 }
 @media only screen and (max-width: 767px) {
+  .banner .bannerparallax img, .banner .parallax-container img {
+    height: 89vh !important;
+    margin-top: 65px !important;
+  }
   .site-header .header-main .logo {
     width: 90%;
     width: calc(100% - 30px);
