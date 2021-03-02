@@ -1136,8 +1136,11 @@ code {
 }
 @media only screen and (max-width: 767px) {
   .banner .bannerparallax img, .banner .parallax-container img {
-    height: 89vh !important;
+    height: 80vh !important;
     margin-top: 65px !important;
+  }
+  .banner .container .fa-chevron-down {
+    color:rgba(51, 51, 51, 0.722);
   }
   .site-header .header-main .logo {
     width: 90%;
@@ -1239,6 +1242,22 @@ code {
   }
 }
 @media only screen and (max-width: 568px) {
+  .banner .bannerparallax img, .banner .parallax-container img {
+    height: 70vh !important;
+  }
+  .banner .parallax-container:after {
+    content: 'RECIPE';
+    position: absolute;
+    color:rgba(51, 51, 51, 0.722);
+    font-size: 1.3rem;
+    bottom: 35px;
+    left: 50%;
+    text-decoration: underline;
+    transform: translateX(-50%);
+  }
+  .banner .container .fa-chevron-down {
+    top: 85vh;
+  }
   .blogs-page .container .section-head {
     display: block !important;
   }
