@@ -69,6 +69,7 @@ export default class Recipes extends Component {
                   objectFit="cover"
                   objectPosition="50% 50%"
                   className="recipeimg"
+                  style={{maxHeight: '350px'}}
                 />
                 <div className="details" style={{textAlign: 'center'}}>
                   <h3 className="title" style={{margin: '.5rem auto'}}>Pastas</h3>
@@ -82,6 +83,7 @@ export default class Recipes extends Component {
                   fluid={firstRisotto.node.image.fluid}
                   objectFit="cover"
                   objectPosition="50% 50%"
+                  style={{maxHeight: '350px'}}
                 />
                 <div className="details" style={{textAlign: 'center'}}>
                   <h3 className="title" style={{margin: '.5rem auto'}}>Risottos</h3>
@@ -94,6 +96,7 @@ export default class Recipes extends Component {
                   fluid={firstSoup.node.image.fluid}
                   objectFit="cover"
                   objectPosition="50% 50%"
+                  style={{maxHeight: '350px'}}
                 />
                 <div className="details" style={{textAlign: 'center'}}>
                   <h3 className="title" style={{margin: '.5rem auto'}}>Soups</h3>
@@ -106,6 +109,7 @@ export default class Recipes extends Component {
                   fluid={firstMain.node.image.fluid}
                   objectFit="cover"
                   objectPosition="50% 50%"
+                  style={{maxHeight: '350px'}}
                 />
                 <div className="details" style={{textAlign: 'center'}}>
                   <h3 className="title" style={{margin: '.5rem auto'}}>Mains</h3>
@@ -118,6 +122,7 @@ export default class Recipes extends Component {
                   fluid={firstSide.node.image.fluid}
                   objectFit="cover"
                   objectPosition="50% 50%"
+                  style={{maxHeight: '350px'}}
                 />
                 <div className="details" style={{textAlign: 'center'}}>
                   <h3 className="title" style={{margin: '.5rem auto'}}>Sides</h3>
