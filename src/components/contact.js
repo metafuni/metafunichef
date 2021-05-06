@@ -24,12 +24,12 @@ export default class Contact extends Component {
             action="https://formspree.io/f/xbjperbj"
             method="POST"
           >
-            <label>Name:</label>
-            <input type="name" name="name" required />
-            <label>Email:</label>
-            <input type="email" name="email" required />
-            <label>Message:</label>
-            <textarea name="message" required></textarea>
+            <label htmlFor="name">Name:</label>
+            <input type="name" name="name" id="name" required />
+            <label htmlFor="email">Email:</label>
+            <input type="email" name="email" id="email" required />
+            <label htmlFor="message">Message:</label>
+            <textarea name="message" id="message" required></textarea>
             {status === "SUCCESS" ? <p style={{ color: '#333333b8', padding: '1rem' }}>Thanks for your message, we will speak soon!</p> : <button>Submit</button>}
             {status === "ERROR" && <p style={{ color: 'red', padding: '1rem'}}>Ooops! Something went wrong there. Did you fill in all the fields?</p>} 
           </form>

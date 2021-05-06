@@ -28,7 +28,7 @@ export default class Banner extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ borderRadius: '.5rem', padding: '1.3rem' }}
-                ></a>
+                > </a>
                 <span style={{ marginLeft: '.5rem', marginTop: '-.5rem', transform: 'translateY(50%)' }}>Follow on Instagram</span>
               </li>
             </ul>
@@ -37,7 +37,7 @@ export default class Banner extends Component {
             className="fa fa-chevron-down fa-2x"
             href="#About"
             aria-label="Arrow down to About section"
-          ></a>
+          > </a>
         </div>
       </div>
     );

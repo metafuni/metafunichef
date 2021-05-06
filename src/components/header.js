@@ -38,6 +38,7 @@ export default class Header extends Component {
                   menu: !menu
                 });
               }}
+              role="none"
             >
               <span></span>
             </div>
@@ -135,6 +136,11 @@ export default class Header extends Component {
                         menu: false
                       });
                     }}
+                    onKeyDown={() => {
+                      this.setState({
+                        menu: false
+                      });
+                    }}
                   >
                     <li key="home">
                       <Link to="/#home">Home</Link>
@@ -182,7 +188,7 @@ export default class Header extends Component {
                         return (
                           <li key="Social" style={{ transform: 'translateY(3px)' }}>
                             {/* <Link to="https://www.instagram.com/stefano_metafuni_chef/" target="_blank" className="fab fa-instagram" /> */}
-                            <a href="https://www.instagram.com/stefano_metafuni_chef/" target="_blank" className="fab fa-instagram"></a>
+                            <a href="https://www.instagram.com/stefano_metafuni_chef/" target="_blank" rel="noreferrer" aria-label="instagram" className="fab fa-instagram"> </a>
                           </li>
                         )
                       })}

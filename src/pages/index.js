@@ -121,17 +121,56 @@ export const pageQuery = graphql`
       sectionText {
         sectionText
       }
+      sectionImage {
+        title
+        description
+        fluid(maxWidth: 1500) {
+          base64
+          aspectRatio
+          src
+          srcSet
+          srcWebp
+          srcSetWebp
+          sizes
+        }
+      }
     }
     contentfulExtrasection {
-      title,
+      title
         childContentfulExtrasectionExtrasectionTextTextNode {
           extrasectionText
         }
+        image {
+          title
+          description
+          fluid(maxWidth: 1500) {
+            base64
+            aspectRatio
+            src
+            srcSet
+            srcWebp
+            srcSetWebp
+            sizes
+          }
+        }
     }
     contentfulLastsection {
-      title,
+      title
       childContentfulLastsectionDescriptionTextNode {
         description
+      }
+      image {
+        title
+        description
+        fluid(maxWidth: 1500) {
+          base64
+          aspectRatio
+          src
+          srcSet
+          srcWebp
+          srcSetWebp
+          sizes
+        }
       }
     }
     allContentfulBlogs(limit: 5, sort: {fields: createdAt, order: DESC}) {

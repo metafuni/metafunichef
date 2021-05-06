@@ -41,6 +41,13 @@ export default class PhotosPage extends Component {
                           selectedItem: index
                         });
                       }}
+                      onKeyDown={() => {
+                        this.setState({
+                          activePopup: true,
+                          selectedItem: index
+                        });
+                      }}
+                      role="none"
                     >
                       <Img
                         fluid={item.fluid}
@@ -61,6 +68,12 @@ export default class PhotosPage extends Component {
                       activePopup: false
                     });
                   }}
+                  onKeyDown={() => {
+                    this.setState({
+                      activePopup: false
+                    });
+                  }}
+                  role="none"
                 ></span>
 
                 <div className="popup-inner">
@@ -71,6 +84,12 @@ export default class PhotosPage extends Component {
                         activePopup: false
                       });
                     }}
+                    onKeyDown={() => {
+                      this.setState({
+                        activePopup: false
+                      });
+                    }}
+                    role="none"
                   ></i>
                   <img
                     style={{ position: 'relative' }}
