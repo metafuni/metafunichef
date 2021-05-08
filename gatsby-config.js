@@ -57,6 +57,12 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: 'gatsby-plugin-preconnect',
+      options: {
+        domains: ['https://www.chefmetafuni.com', 'https://chefmetafuni.com'],
+      },
+    },
     `gatsby-transformer-remark`,
     {
       resolve: 'gatsby-plugin-robots-txt',
