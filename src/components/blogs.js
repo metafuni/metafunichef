@@ -26,6 +26,7 @@ export default class Blogs extends Component {
                           fluid={item.node.featureImage.fluid}
                           objectFit="cover"
                           objectPosition="50% 50%"
+                          alt={item.node.featureImage.description}
                         />
                       ) : (
                           <div className="no-image"></div>
@@ -44,7 +45,7 @@ export default class Blogs extends Component {
             </ul>
             <div className="see-more">
               <Link to="/blogs">
-                <span>See More</span>
+                <span>More Blogs</span>
               </Link>
             </div>
           </div>

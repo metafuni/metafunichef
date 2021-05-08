@@ -25,6 +25,7 @@ export default class Recipes extends Component {
                         fluid={item.node.image.fluid}
                         objectFit="cover"
                         objectPosition="50% 50%"
+                        alt={item.node.image.description}
                       />
                     ) : (
                         <div className="no-image"></div>
@@ -34,8 +35,6 @@ export default class Recipes extends Component {
                       <div className="date">
 
                         <div className="diet"><i className="fas fa-utensils"></i>{item.node.category}</div>
-                        {/* <div className="diet"><i className="fas fa-map-pin"></i>{item.node.origin}</div> */}
-
                         <div className="diet">
                           {item.node.diet === "Chicken" || item.node.diet === "Beef" || item.node.diet === "Veal" || item.node.diet === "Lamb" || item.node.diet === "Pork" || item.node.diet === "Turkey" || item.node.diet === "Goat" || item.node.diet === "Duck" || item.node.diet === "Rabbit" || item.node.diet === "Game" ? (<i className="fas fa-drumstick-bite"></i>) : null}
                           {item.node.diet === "Fish" ? (<i className="fas fa-fish"></i>) : null}

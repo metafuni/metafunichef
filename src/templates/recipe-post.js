@@ -34,6 +34,7 @@ export default class recipePost extends Component {
           <Parallax speed={2} style={{ height: '100vh' }} className="parallax-container">
             <Img
               fluid={data.image.fluid}
+              alt={data.image.description}
             />
           </Parallax>
           <div className="container" style={{ padding: '2.25rem 1rem', textAlign: 'center' }}>

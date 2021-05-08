@@ -14,6 +14,7 @@ export default class Banner extends Component {
             objectFit="cover"
             objectPosition="50% 50%"
             imgStyle={{ opacity: '.9' }}
+            alt={data.bannerImage.description}
           />
         </Parallax>
         <div className="container">

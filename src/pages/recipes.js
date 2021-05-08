@@ -69,6 +69,7 @@ export default class Recipes extends Component {
                   objectPosition="50% 50%"
                   className="recipeimg"
                   style={{maxHeight: '350px'}}
+                  alt={firstPasta.node.image.description}
                 />
                 <div className="details" style={{textAlign: 'center'}}>
                   <h3 className="title" style={{margin: '.5rem auto'}}>Pastas</h3>
@@ -83,6 +84,7 @@ export default class Recipes extends Component {
                   objectFit="cover"
                   objectPosition="50% 50%"
                   style={{maxHeight: '350px'}}
+                  alt={firstRisotto.node.image.description}
                 />
                 <div className="details" style={{textAlign: 'center'}}>
                   <h3 className="title" style={{margin: '.5rem auto'}}>Risottos</h3>
@@ -96,6 +98,7 @@ export default class Recipes extends Component {
                   objectFit="cover"
                   objectPosition="50% 50%"
                   style={{maxHeight: '350px'}}
+                  alt={firstSoup.node.image.description}
                 />
                 <div className="details" style={{textAlign: 'center'}}>
                   <h3 className="title" style={{margin: '.5rem auto'}}>Soups</h3>
@@ -109,6 +112,7 @@ export default class Recipes extends Component {
                   objectFit="cover"
                   objectPosition="50% 50%"
                   style={{maxHeight: '350px'}}
+                  alt={firstMain.node.image.description}
                 />
                 <div className="details" style={{textAlign: 'center'}}>
                   <h3 className="title" style={{margin: '.5rem auto'}}>Mains</h3>
@@ -122,6 +126,7 @@ export default class Recipes extends Component {
                   objectFit="cover"
                   objectPosition="50% 50%"
                   style={{maxHeight: '350px'}}
+                  alt={firstSide.node.image.description}
                 />
                 <div className="details" style={{textAlign: 'center'}}>
                   <h3 className="title" style={{margin: '.5rem auto'}}>Sides</h3>
@@ -153,6 +158,7 @@ export const pageQuery = graphql`
               srcSetWebp
               sizes
             }
+            description
           }
           createdAt
           category

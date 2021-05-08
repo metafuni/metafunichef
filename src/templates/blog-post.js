@@ -53,6 +53,7 @@ export default class blogPost extends Component {
                 fluid={data.featureImage.fluid}
                 objectFit="cover"
                 objectPosition="50% 50%"
+                alt={data.featureImage.description}
               />
             ) : (
                 <div className="no-image"></div>
@@ -109,6 +110,7 @@ export const pageQuery = graphql`
           srcSetWebp
           sizes
         }
+        description
       }
       description {
         childMarkdownRemark {

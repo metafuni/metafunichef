@@ -92,6 +92,7 @@ export const pageQuery = graphql`
           srcSetWebp
           sizes
         }
+        description
       }
       designation
       age
@@ -113,6 +114,7 @@ export const pageQuery = graphql`
           srcSetWebp
           sizes
         }
+        description
       }
       bannerList
     }
@@ -188,6 +190,7 @@ export const pageQuery = graphql`
               srcSetWebp
               sizes
             }
+            description
           }
           createdAt(fromNow: true)
         }
@@ -214,6 +217,7 @@ export const pageQuery = graphql`
               srcSetWebp
               sizes
             }
+            description
           }
           createdAt
         }
@@ -230,6 +234,7 @@ export const pageQuery = graphql`
           srcSetWebp
           sizes
         }
+        description
       }
     }
     contentfulSiteInformation {

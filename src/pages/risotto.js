@@ -66,6 +66,7 @@ export default class Risotto extends Component {
                           fluid={item.node.image.fluid}
                           objectFit="cover"
                           objectPosition="50% 50%"
+                          alt={item.node.image.description}
                         />
                       ) : (
                           <div className="no-image"></div>
@@ -123,6 +124,7 @@ export const pageQuery = graphql`
               srcSetWebp
               sizes
             }
+            description
           }
           createdAt
           category

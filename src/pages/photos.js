@@ -53,6 +53,7 @@ export default class PhotosPage extends Component {
                         fluid={item.fluid}
                         objectFit="cover"
                         objectPosition="50% 50%"
+                        alt={item.description}
                       />
                     </div>
                   </li>

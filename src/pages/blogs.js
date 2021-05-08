@@ -37,6 +37,7 @@ export default class Blogs extends Component {
                           fluid={item.node.featureImage.fluid}
                           objectFit="cover"
                           objectPosition="50% 50%"
+                          alt={item.node.featureImage.description}
                         />
                       ) : (
                         <div className="no-image"></div>
@@ -77,6 +78,7 @@ export const pageQuery = graphql`
               srcSetWebp
               sizes
             }
+            description
           }
           createdAt
           childContentfulBlogsDescriptionTextNode {
