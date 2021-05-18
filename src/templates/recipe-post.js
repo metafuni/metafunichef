@@ -44,7 +44,7 @@ export default class recipePost extends Component {
           </div>
         </div>
         <SEO
-          title={data.title}
+          title={`${data.title} recipe`}
           keywords={['Metafuni Chef', 'Italian', 'World', 'Cooking', `${data.title}`, `${data.category}`, `${data.origin}`, `${data.diet}`, data.tags.map(el => (
             `${el} `
           ))]}
