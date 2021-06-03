@@ -18,7 +18,7 @@ const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 module.exports = {
   siteMetadata: {
     title: `Metafuni Chef`,
-    siteUrl: `https://www.chefmetafuni.com`,
+    siteUrl,
     description: `Creative, traditional and authentic cooking`,
     author: `@stefano_metafuni_chef`
   },
@@ -32,6 +32,19 @@ module.exports = {
         head: true,
         // Setting this parameter is optional
         anonymize: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-gdpr-cookies`,
+      options: {
+        googleAnalytics: {
+          trackingId: 'UA-190910146-1', // leave empty if you want to disable the tracker
+          cookieName: 'gatsby-gdpr-google-analytics', // default
+          anonymize: true, // default
+          allowAdFeatures: false // default
+        },
+        // defines the environments where the tracking should be available  - default is ["production"]
+        environments: ['production', 'development']
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -52,7 +65,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://www.chefmetafuni.com`,
+        siteUrl
       },
     },
     `gatsby-transformer-sharp`,
