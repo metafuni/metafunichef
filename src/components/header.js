@@ -121,6 +121,16 @@ export default class Header extends Component {
                         </li>
                       )
                     })}
+                    {data.menus
+                    .filter(item => item === "Social")
+                    .map(t => {
+                      return (
+                        <li key="Social" style={{ transform: 'translateY(3px)' }}>
+                          <Link to="https://www.facebook.com/chefmetafuni" target="_blank" rel="noreferrer" className="fab fa-facebook-square">
+                          </Link>
+                        </li>
+                      )
+                    })}
                 </ul>
               </div>
             ) : (

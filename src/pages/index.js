@@ -98,6 +98,7 @@ export const pageQuery = graphql`
       age
       id
       instagram
+      facebook
       location
       description {
         childMarkdownRemark {

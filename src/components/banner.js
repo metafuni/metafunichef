@@ -22,15 +22,25 @@ export default class Banner extends Component {
             <h1 style={{ marginBottom: '2rem' }}>{data.designation}.</h1>
             <ul className="social">
               <li style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <div style={{margin: '0', padding: '0', display: 'flex'}}>
                 <a
-                  aria-label="Metafuni Chef Instagram Channel"
+                  aria-label="Chef Metafuni Instagram Channel"
                   className="fab fa-instagram fa-2x"
                   href={data.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
+                  style={{ borderRadius: '.5rem', padding: '1.3rem', marginRight: '.35rem' }}
+                > </a>
+                <a
+                  aria-label="Chef Metafuni Facebook Page"
+                  className="fab fa-facebook-f fa-2x"
+                  href={data.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{ borderRadius: '.5rem', padding: '1.3rem' }}
                 > </a>
-                <span style={{ marginLeft: '.5rem', marginTop: '-.5rem', transform: 'translateY(50%)' }}>Follow on Instagram</span>
+                </div>
+                <span style={{ marginLeft: '.5rem', marginTop: '-.5rem', transform: 'translateY(50%)', textAlign: 'center' }}>Follow on Instagram and Facebook</span>
               </li>
             </ul>
           </div>
