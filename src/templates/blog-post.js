@@ -30,15 +30,6 @@ export default class blogPost extends Component {
 
     return (
       <Layout>
-        {/* <SEO
-          title={data.title}
-          keywords={[
-            `Rohit Gupta`,
-            `Frontend Developer`,
-            `Developer`,
-            `${data.title}`
-          ]}
-        /> */}
         <SEO
           title={data.title}
           keywords={['Metafuni Chef', 'Italian', 'World', 'Cooking', 'Blog', 'Foodblog', `${data.title}`, data.tags.map(el => (
