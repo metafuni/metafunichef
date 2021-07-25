@@ -18,6 +18,7 @@
     "gatsby-plugin-manifest": "^2.9.1",
     "gatsby-plugin-offline": "^3.10.2",
     "gatsby-plugin-preconnect": "^1.2.0",
+    "gatsby-plugin-preload-fonts": "^1.9.1",
     "gatsby-plugin-react-helmet": "^3.7.0",
     "gatsby-plugin-robots-txt": "^1.5.6",
     "gatsby-plugin-sharp": "^2.11.2",
@@ -52,7 +53,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "preload-fonts": "gatsby-preload-fonts"
   },
   "repository": {
     "type": "git",
