@@ -20,7 +20,7 @@ module.exports = {
     title: `Metafuni Chef`,
     siteUrl,
     description: `Creative, traditional and authentic cooking`,
-    author: `@stefano_metafuni_chef`
+    author: `@chefmetafuni`
   },
   plugins: [
     {

@@ -116,7 +116,7 @@ export default class Header extends Component {
                     .map(t => {
                       return (
                         <li key="Social" style={{ transform: 'translateY(3px)' }}>
-                          <Link to="https://www.instagram.com/stefano_metafuni_chef/" target="_blank" rel="noreferrer" className="fab fa-instagram">
+                          <Link to="https://www.instagram.com/chefmetafuni/" target="_blank" rel="noreferrer" className="fab fa-instagram">
                           </Link>
                         </li>
                       )
@@ -192,7 +192,7 @@ export default class Header extends Component {
                       .map(t => {
                         return (
                           <li key="Social" style={{ transform: 'translateY(3px)' }}>
-                            <a href="https://www.instagram.com/stefano_metafuni_chef/" target="_blank" rel="noreferrer" aria-label="instagram" className="fab fa-instagram"> </a>
+                            <a href="https://www.instagram.com/chefmetafuni/" target="_blank" rel="noreferrer" aria-label="instagram" className="fab fa-instagram"> </a>
                           </li>
                         )
                       })}
